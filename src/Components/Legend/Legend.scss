@@ -1,0 +1,15 @@
+.legend{
+    font-family: LatoBold;
+    display: flex;
+    position: absolute;
+    top: 70%;
+    left: 80%;
+
+    align-items: center;
+    justify-content: space-between;
+    width: 4rem;
+    background-color: #D6EAF8;
+    padding: 1rem 1rem;
+    border-radius: 3px;
+    opacity: 0.8;
+}

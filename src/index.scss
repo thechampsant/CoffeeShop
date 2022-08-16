@@ -1,0 +1,29 @@
+@font-face {
+  font-family: Lato;
+  src: url(../font/Lato-Regular.ttf);
+}
+
+@font-face {
+  font-family: LatoBold;
+  src: url(../font/Lato-Bold.ttf);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+  background-color: #ECF0F1;
+  min-height: 90vh;
+  width: 100vw;
+
+  font-family: Lato;
+  
+}
+html{
+  font-size: 62.5%;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

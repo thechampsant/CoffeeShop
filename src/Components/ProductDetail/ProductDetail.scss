@@ -1,0 +1,45 @@
+
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 76vh;
+    padding: 3rem;
+    box-sizing: border-box;
+
+    &__heading{
+        font-size: 36px;
+        font-weight: 900;
+        font-family: LatoBold;
+    }
+    &__rating{
+        display: flex;
+        align-items: center;
+    }
+    &__rating-price{
+        font-size: 24px;
+        font-weight: 400;
+        margin-left: 2rem;
+        color: #D61820;
+    }
+    &__customization--items{
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    &__action{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        &-count{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 15rem;
+        }
+    }
+}
+
+.action-font{
+    font-size: 16px;
+}

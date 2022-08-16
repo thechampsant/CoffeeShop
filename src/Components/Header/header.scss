@@ -1,0 +1,28 @@
+.header{
+    height: 10vh;
+    background-color: #fff;
+    .navigation{
+        height: inherit;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 2rem;
+        box-sizing: border-box;
+        ul{
+            list-style: none;
+            display: flex;
+            li > a{
+                text-decoration: none;
+                color: #4B4B4B;
+                margin-left: 2rem;
+                font-size: 14px;
+                cursor: pointer;
+            }
+        }
+        &__logo{
+            &-1{
+                height: 6rem;                
+            }
+        }
+    }
+}
