@@ -25,7 +25,7 @@ const Header = () =>{
                 <div className='navigation__ops'>
                     <div className='navigation__ops-pop'>
                         <img src={Cart} alt="cart" className='cart'/>
-                        <PopNumber  cName="popnumber" count={cartItems.cartValue}/>
+                        <PopNumber  cName="popnumber" count={cartItems.mainItem.length}/>
                     </div>
                     
                     <CustomButton name="#D61820">

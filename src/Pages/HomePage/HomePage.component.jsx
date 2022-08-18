@@ -25,7 +25,7 @@ const HomePage = () =>{
             </Container>
             <Container name="container-red">
                 {menu.length > 0
-                    ? <ImgBox size="30rem" imgHeight="25rem" imgWidth="25rem" bg="#ffffff" imgURL={menu[item].item_image}/>
+                    ? <ImgBox size="40rem" imgHeight="35rem" imgWidth="35rem" bg="#ffffff" imgURL={menu[item].item_image}/>
                     : null
                 }
                 

@@ -8,16 +8,21 @@ import './ProductDetail.scss'
 
 import { useContext } from 'react'
 import { SubMenuContext } from '../../Context/subMenu.context'
+import { CartItemContext } from '../../Context/cart.context'
+import { MenuContext } from '../../Context/menu.context'
 
 const ProductDetail = (props) =>{
     
     const {subMenu,setsubMenu} = useContext(SubMenuContext)
+    const {cartItems,setCartItems} = useContext(CartItemContext)
+    const {menu,setMenu} = useContext(MenuContext)
+    console.log(cartItems);
 
     const [mainCount, setmainCount] = useState(0);
     const {Item} = props
 
     const click = (itemNo) =>{
-        const newState = subMenu.map((obj) =>{
+        const newState = subMenu.map((obj,key) =>{
             if(obj.id === itemNo){
                 return {...obj, count: obj.count + 1}
             }
@@ -27,14 +32,31 @@ const ProductDetail = (props) =>{
     }
 
     const subtractItem = () =>{
-        if(mainCount > 0)
+        if(mainCount > 0){
             setmainCount(mainCount - 1)
+        }
     }
 
     const addItem = () =>{
         setmainCount(mainCount + 1)
     }
-    console.log(mainCount);
+    
+    const addToCart = () =>{
+        if(mainCount > 0){
+            // setCartItems({...cartItems, cartValue: cartItems.cartValue + mainCount})
+            
+            const newState = menu.map((obj) =>{
+                if(Item.id === obj.id ){
+                    setCartItems({...cartItems, mainItem: [...cartItems.mainItem, Item.id]})
+                    return {...obj, qty: mainCount}
+                }
+                return obj
+            })
+            setMenu(newState)
+        }
+        
+    }
+    
     return(
         <div className='content'>
             <h1 className='content__heading'>{Item.item_name}</h1>
@@ -76,7 +98,7 @@ const ProductDetail = (props) =>{
                         +
                     </CustomButton>
                 </div>
-                <CustomButton name="#D61820">
+                <CustomButton name="#D61820" operation={addToCart}>
                     Add to Cart
                 </CustomButton>
             </div>

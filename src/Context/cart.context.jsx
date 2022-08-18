@@ -9,8 +9,7 @@ export const CartItemContext = createContext({
 export const CartItemProvider = ({children}) =>{
     const cartitems ={
         mainItem :[],
-        subItem:[],
-        cartValue:0
+        // cartValue:0
     }
     const [cartItems,setCartItems] = useState(cartitems);
     
