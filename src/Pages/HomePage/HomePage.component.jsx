@@ -25,7 +25,7 @@ const HomePage = () =>{
             </Container>
             <Container name="container-red">
                 {menu.length > 0
-                    ? <ImgBox size="40rem" imgHeight="35rem" imgWidth="35rem" bg="#ffffff" imgURL={menu[item].item_image}/>
+                    ? <ImgBox size="40rem" imgHeight="35rem" imgWidth="35rem" bg="#F5B7B1" imgURL={menu[item].item_image}/>
                     : null
                 }
                 
@@ -34,7 +34,7 @@ const HomePage = () =>{
                 {
                     menu.map((value,key)=>{
                         return(
-                            <ImgBox size="20rem" key={key} imgHeight="13rem" imgWidth="13rem" bg="#ffffff" imgURL={value.item_image}  rating={value.item_rating} cName="box-click" random={random} item_no={key}/>
+                            <ImgBox size="20rem" key={key} imgHeight="13rem" imgWidth="13rem" bg="#FFF" imgURL={value.item_image}  rating={value.item_rating} cName="box-click" random={random} item_no={key}/>
                         )
                     })
                 }
