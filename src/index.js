@@ -4,13 +4,18 @@ import './index.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { MenuProvider } from './Context/menu.context';
-
+import { SubMenuProvider} from './Context/subMenu.context';
+import {CartItemProvider } from './Context/cart.context';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <MenuProvider>
-      <App />
+      <SubMenuProvider>
+        <CartItemProvider>
+          <App />
+        </CartItemProvider>
+      </SubMenuProvider>
     </MenuProvider>
   </React.StrictMode>
 );

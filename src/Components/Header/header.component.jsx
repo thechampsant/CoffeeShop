@@ -1,8 +1,14 @@
 import './header.scss'
 import CustomButton from '../CustomButton/CustomButton.component';
-import Logo from '../../Img/cafe-coffee-day.svg'
+import Logo from '../../Img/cafe-coffee-day.svg';
+import Cart from '../../Img/bag.png';
+import { PopNumber } from '../PopNumber/PopNumber.component';
+import { useContext } from 'react';
+import {CartItemContext} from "../../Context/cart.context";
+
 
 const Header = () =>{
+    const {cartItems} = useContext(CartItemContext);
     return(
         <div className="header">
             <nav className="navigation">
@@ -16,9 +22,16 @@ const Header = () =>{
                         <li><a href="#">About</a></li>
                     </ul>
                 </div>
-                <CustomButton name="#D61820">
-                    Log In
-                </CustomButton>
+                <div className='navigation__ops'>
+                    <div className='navigation__ops-pop'>
+                        <img src={Cart} alt="cart" className='cart'/>
+                        <PopNumber  cName="popnumber" count={cartItems.cartValue}/>
+                    </div>
+                    
+                    <CustomButton name="#D61820">
+                        Log In
+                    </CustomButton>
+                </div>
             </nav>
         </div>
     )

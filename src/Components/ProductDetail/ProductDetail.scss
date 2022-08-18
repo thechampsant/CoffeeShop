@@ -25,6 +25,10 @@
     &__customization--items{
         display: flex;
         justify-content: space-evenly;
+        &-sub{
+            text-align: center;
+            position: relative;
+        }
     }
 
     &__action{
