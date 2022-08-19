@@ -1,0 +1,52 @@
+.cartpage{
+    height: 76vh;
+    width: inherit;
+
+    margin: 2rem;
+    border-radius: 5px;
+    display: flex;
+    overflow-y: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    table{
+        border: 1px solid;
+        width: 100rem;
+        height: 60rem;
+       
+        tr > th{
+            height: 5rem;
+            background-color: #D61820;
+            color: white;
+      
+        }
+        tr > td{
+            text-align: center;
+            
+        }
+    }
+}
+.footer-table{
+    height: 5rem;
+    text-align: center;
+}
+
+.display-table{
+    height: 30rem;
+}
+
+.table-list{
+    list-style: none;
+}
+
+.tax{
+    list-style: none;
+    font-style: italic;
+    font-family: latoBold;
+
+    &:not(:last-child){
+        margin-top: 2rem;
+    }
+}

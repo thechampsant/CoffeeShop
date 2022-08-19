@@ -24,6 +24,10 @@
             }
         }
         &__logo{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 20rem;
             &-1{
                 height: 6rem;                
             }
